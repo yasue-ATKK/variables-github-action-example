@@ -9,6 +9,9 @@ on:
 jobs:
   sync-figma-to-tokens:
     runs-on: ubuntu-latest
+    env:
+      PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+      FILE_KEY: ${{ vars.FILE_KEY }}
     permissions:
       # Need to be able to create new branches and commits
       contents: write
